@@ -13,12 +13,6 @@
             <referenceContainer name="header-wrapper">
                 <block class="Magento\Theme\Block\Html\Header" name="link" template="html/link.phtml"/>
             </referenceContainer>
-            <!-- <referenceContainer name="page.top">
-            <referenceBlock name="catalog.topnav" remove="true" />
-            </referenceContainer> -->
-            <!-- <move element="catalog.topnav" destination="sidebar.main" /> -->
-
-           <!-- <move element="navigation.sections" destination="header.container" /> -->
             <referenceContainer name="header-wrapper"> 
                 <block class="Magento\Cms\Block\Block" name="header-link-1"> 
                     <arguments> 
