@@ -93,6 +93,7 @@ class Context extends \Magento\Framework\View\Element\Template\Context
             $validator
         );
     }
+
     /**
 	 * Function for getting developer helper object
      * @return \Excellence\ExcellenceSlider\Helper\Data
@@ -101,6 +102,8 @@ class Context extends \Magento\Framework\View\Element\Template\Context
     {
         return $this->_devToolHelper;
     }
+
+
     /**
 	 * Function for getting registry object
      * @return \Magento\Framework\Registry
@@ -109,6 +112,7 @@ class Context extends \Magento\Framework\View\Element\Template\Context
     {
         return $this->registry;
     }
+	
 	/**
 	 * Function for getting excellenceslider model config object 
      * @return \Excellence\ExcellenceSlider\Model\Config
@@ -116,6 +120,7 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	public function getConfig(){
 		return $this->_config;
 	}
+	
 	/**
 	 * Function for getting object manager object 
      * @return \Magento\Framework\ObjectManagerInterface
@@ -123,6 +128,7 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	public function getObjectManager(){
 		return $this->_objectManager;
 	}
+	
 	/**
 	 * Function for getting UrlFactory object 
      * @return \Magento\Framework\UrlFactory
@@ -130,4 +136,5 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	public function getUrlFactory(){
 		return $this->_urlFactory;
 	}
+
 }
