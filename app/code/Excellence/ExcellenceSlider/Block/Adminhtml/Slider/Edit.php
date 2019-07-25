@@ -1,8 +1,5 @@
 <?php
 namespace Excellence\ExcellenceSlider\Block\Adminhtml\Slider;
-/**
- * CMS block edit form container
- */
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     protected function _construct()
@@ -10,12 +7,9 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 		$this->_objectId = 'id';
         $this->_blockGroup = 'Excellence_ExcellenceSlider';
         $this->_controller = 'adminhtml_slider';
-
         parent::_construct();
-
         $this->buttonList->update('save', 'label', __('Save Slide'));
         $this->buttonList->update('delete', 'label', __('Delete Slide'));
-
         $this->buttonList->add(
             'saveandcontinue',
             array(
@@ -27,7 +21,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
             ),
             -100
         );
-
         $this->_formScripts[] = "
             function toggleEditor() {
                 if (tinyMCE.getInstanceById('block_content') == null) {
@@ -38,7 +31,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
             }
         ";
     }
-
     /**
      * Get edit form container header text
      *

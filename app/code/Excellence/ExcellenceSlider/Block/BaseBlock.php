@@ -1,6 +1,7 @@
 <?php
 namespace Excellence\ExcellenceSlider\Block;
 use Magento\Framework\UrlFactory;
+
 class BaseBlock extends \Magento\Framework\View\Element\Template
 {
 	/**
@@ -89,5 +90,4 @@ class BaseBlock extends \Magento\Framework\View\Element\Template
 		}
 		return false;
 	}
-	
 }
