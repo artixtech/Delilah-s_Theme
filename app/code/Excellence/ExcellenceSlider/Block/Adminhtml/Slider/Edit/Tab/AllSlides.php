@@ -18,18 +18,15 @@ class AllSlides extends \Magento\Backend\Block\Widget\Form\Generic implements \M
     protected function _prepareForm()
     {
 		$model = $this->_coreRegistry
-                      ->registry('excellenceslider_slider');
+        ->registry('excellenceslider_slider');
 		$isElementDisabled = false;
         $form = $this->_formFactory->create();
-
         $form->setHtmlIdPrefix('page_');
-
         $fieldset = $form->addFieldset('base_fieldset', array('legend' => __('All Slides')));
-
         if ($model->getId()) {
             $fieldset->addField('id', 'hidden', array('name' => 'id'));
         }
-        
+
 		$fieldset->addField(
             'path',
             'image',

@@ -1,5 +1,6 @@
 <?php
 namespace Excellence\ExcellenceSlider\Block\Adminhtml\Slider;
+
 class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
     /**
@@ -166,7 +167,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     public function getGridUrl()
     {
         return $this->getUrl('excellenceslider/*/index',
-                             ['_current' => true]);
+                ['_current' => true]);
     }
 
     public function getRowUrl($row)
@@ -174,7 +175,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         return $this->getUrl(
             'excellenceslider/*/edit',
             ['store' => $this->getRequest()
-                             ->getParam('store'), 'id' => $row->getId()]
+                ->getParam('store'), 'id' => $row->getId()]
         );
     }
 }

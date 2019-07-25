@@ -10,10 +10,10 @@ class Delete extends \Magento\Backend\App\Action
     {
 		$id = $this->getRequest()->getParam('id');
 		try {
-				$banner = $this->_objectManager->get('Excellence\ExcellenceSlider\Model\Slider')->load($id);
-				$banner->delete();
+                $banner = $this->_objectManager->get('Excellence\ExcellenceSlider\Model\Slider')->load($id);
+                $banner->delete();
                 $this->messageManager->addSuccess(
-                    __('Delete successfully !')
+                __('Delete successfully !')
                 );
             }catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());

@@ -17,7 +17,7 @@ class MassStatus extends \Magento\Backend\App\Action
                 foreach ($ids as $id) {
                     $row = $this->_objectManager->get('Excellence\Firstgrid\Model\Slider')->load($id);
 					$row->setData('status',$status)
-							->save();
+					->save();
 				}
                 $this->messageManager->addSuccess(
                     __('A total of %1 record(s) have been deleted.', count($ids))
