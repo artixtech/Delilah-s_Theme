@@ -8,14 +8,14 @@
 	   <referenceContainer name="content">
             <block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit" name="excellenceslider_slider_edit"/>
         </referenceContainer>
-		 <referenceContainer name="left">
+        <referenceContainer name="left">
             <block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit\Tabs" name="excellenceslider_slider_edit_tabs">
-				<block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit\Tab\AllSlides" name="excellenceslider_slider_edit_tab_allslides"/>
-				 <action method="addTab">
+			<block class="Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit\Tab\AllSlides" name="excellenceslider_slider_edit_tab_allslides"/>
+				<action method="addTab">
                     <argument name="name" xsi:type="string">allslides_section</argument>
                     <argument name="block" xsi:type="string">excellenceslider_slider_edit_tab_allslides</argument>
                 </action>
-			</block>
+            </block>
         </referenceContainer>
     </body>
 </page>
