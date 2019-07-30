@@ -1,14 +1,28 @@
-<div>
-    fgrhfrd
-</div>
-<div>
-<?php
+<div class="product-slider">
+    <?php
         echo $this->getLayout()
         ->createBlock('Magento\Cms\Block\Block')
         ->setBlockId('cake')
         ->toHtml();
     ?>
 </div>
+<div class="product-slider">
+    <?php
+        echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('platters')
+        ->toHtml();
+    ?>
+</div>
+<div class="product-slider">
+    <?php
+        echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('cafe')
+        ->toHtml();
+    ?>
+</div>
+
 <script type="text/javascript" xml="space">
     require([
         'jquery',
@@ -26,7 +40,7 @@
         });
     });
 </script> 
-<!-- <script type="text/javascript" xml="space">
+<script type="text/javascript" xml="space">
     require([
         'jquery',
         'bxSlider'
@@ -39,4 +53,4 @@
             });
         });
     });
-</script> -->
+</script>

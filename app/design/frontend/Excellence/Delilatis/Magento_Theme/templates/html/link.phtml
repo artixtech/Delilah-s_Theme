@@ -42,3 +42,19 @@
         </li>
     </ul>
 </div>
+<div>
+<?php
+    echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('hover-link')
+    ->toHtml();
+?>
+</div>
+
+<script type="text/javascript">
+   require(['jquery'], function($) {
+        $('.category-head').click(function(){
+        $('#links').toggleClass('show-block');
+    });
+});
+   </script>

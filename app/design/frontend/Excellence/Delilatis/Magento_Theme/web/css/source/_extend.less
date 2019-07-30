@@ -56,6 +56,21 @@
         }
     }
 }
+.table{
+    position: absolute !important;
+    z-index: 30;
+    margin-top: 116px;
+    margin-left: 249px;
+    background: #e8c4c4; 
+    padding-right: 0;
+    width: 73% !important;
+    font-size: 11px;
+    height: 180px;
+    margin-bottom: 0px;
+    th{
+        border-bottom: 1px solid #ca0707;
+    }
+}
 .minicart-wrapper {
     background: url('@{baseDir}images/cart.png');
     background-repeat: no-repeat;
@@ -191,26 +206,39 @@
     width: 25%;
     margin-top: 50px;
     padding-left: 15px;
-    input{
-        border: 1px solid #3a3737;
-    }
-    .submit{
-        padding: 3px 30px;
-        margin: 0 auto;
-        background: #3a3737;
-        color: #fbfbfb;
-        border: 1px solid #3a3737;
-    }
-    ul{
-        list-style: none;
-        padding-left: 0px;
-        a{
-            color:black;
-            text-decoration: none;
+    form{
+        padding:0px;
+        input{
+            border: 1px solid #3a3737;
+            height:27px;
         }
-        a:hover{
-            color:black;
-            text-decoration: none;
+        .user{
+            margin-bottom: 13px;
+        }
+        .password{
+            margin-bottom: 25px;
+        }
+        .submit{
+            padding: 3px 30px;
+            margin: 0 auto;
+            background: #3a3737;
+            color: #fbfbfb;
+            border: 1px solid #3a3737;
+        }
+        ul{
+            list-style: none;
+            padding-left: 0px;
+            li{
+                margin-bottom:0px;
+            }
+            a{
+                color:black;
+                text-decoration: none;
+            }
+            a:hover{
+                color:black;
+                text-decoration: none;
+            }
         }
     }
     .block.block-wishlist{
@@ -256,21 +284,27 @@
     width: 32.33%;
     text-align: center;
 }
-// .widget-cake{
-//     .watermark{
-//         position:relative;
-//         padding: 0px;
-//         .header{
-//             position: absolute;
-//         }
-//     }
-//     .description{
-//         font-family: time;
-//         text-align: center;
-//         font-size: 15px;
-//     }
-// }
-
+.name{
+    font-size: 50px;
+    text-align: center;
+    color: #b12a2a;
+    font-weight: 100;
+    font-family: @family;
+}
+.description{
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+}
+.product-slider{
+    display: inline-block;
+    margin-top: 40px;
+}
+.show-block{
+    display:block !important;
+    }
+    #links{
+    display:none;}
 //End Body Section
 //Start Footer Section
 
@@ -492,6 +526,11 @@
     }
     .page-footer .footer.content .lower-footer .subscribe {
         padding-left: 76px;
+    }
+    .table{
+        margin-left: 217px;
+        width: 71% !important;
+        font-size: 8px;
     }
 }
 @media only screen and (max-width: 425px) and (min-width: 376px){
