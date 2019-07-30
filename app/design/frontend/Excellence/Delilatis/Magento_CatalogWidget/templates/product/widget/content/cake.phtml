@@ -1,16 +1,16 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-// @codingStandardsIgnoreFile
-
-/** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+$categoryId = $block->getCategoryId();
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$category = $_objectManager->create('Magento\Catalog\Model\Category')
+->load($categoryId);
+$categoryName= $category->getName();
+$categoryDesc = $category->getDescription();
 ?>
+<div class="name"><?= __($categoryName); ?></div>
+<div class="description"><?= __($categoryDesc); ?></div>
+
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
 <?php
-
     $type = 'widget-product-grid';
 
     $mode = 'grid';
@@ -24,7 +24,6 @@
     $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
     $description = false;
 ?>
-
     <div>
         <div class="bxslider cake-slider">
             <?php 
@@ -52,5 +51,4 @@
             ?>            
         </div>
     </div>
-</div>
 <?php endif;?>

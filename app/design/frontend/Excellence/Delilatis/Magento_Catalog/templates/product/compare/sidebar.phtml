@@ -1,0 +1,11 @@
+<div>
+    <form class="col-md-10 col-sm-10 col-xs-10" action="customer/account/login/referer" method="post">
+        <input class="user" type="text" name="uname" placeholder="username"/><br>
+        <input class="password" type="password" name="password" placeholder="password"/><br>
+        <input class="submit" type="submit" value="SIGN IN"/><br><br>
+            <ul>
+                <li><a href="<?= $this->getUrl('customer/account/create');?>"><?= /* @escapeNotVerified */ __('New User') ?></a></li>  
+                <li><a href="<?= $this->getUrl('customer/account/forgotpassword');?>"><?= /* @escapeNotVerified */ __('Forget your password?') ?></a></li>  
+        </ul>
+     </form>
+</div>

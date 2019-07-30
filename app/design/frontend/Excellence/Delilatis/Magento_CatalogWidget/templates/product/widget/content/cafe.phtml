@@ -1,6 +1,15 @@
+<?php
+$categoryId = $block->getCategoryId();
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$category = $_objectManager->create('Magento\Catalog\Model\Category')
+->load($categoryId);
+$categoryName= $category->getName();
+$categoryDesc = $category->getDescription();
+?>
+<div class="name"><?= __($categoryName); ?></div>
+<div class="description"><?= __($categoryDesc); ?></div>
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())): ?>
 <?php
-
     $type = 'widget-product-grid';
 
     $mode = 'grid';
@@ -14,14 +23,7 @@
     $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::DEFAULT_VIEW;
     $description = false;
 ?>
-<div class="">
-    <div>
-        <img class="col-md-3 col-sm-3 col-xs-3" src="<?php echo $this->getViewFileUrl("images/watermark-left.jpg");?>"/>
-        <img class="col-md-3 col-sm-3 col-xs-3" src="<?php echo $this->getViewFileUrl("images/watermark-right.jpg");?>"/>
-        <div>
-            <span><?= /* @escapeNotVerified */ __('CAKES') ?></span></span>
-        </div>
-    </div>
+<div>
     <div>
         <div class="bxslider main-slider">
             <?php 
@@ -37,10 +39,6 @@
                             href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>"
                             class="product-item-link">
                             <?= $block->escapeHtml($_item->getName()) ?>
-                            <!-- <?php
-                            //  getData($items);
-                            //  die("string");
-                             ?> -->
                         </a>
                     </strong>
                     <?php
