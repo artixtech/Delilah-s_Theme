@@ -10,7 +10,7 @@ $sliderCollection = $helper->getSliderUrl();
 
 if ($sliderStatus == '1'){ 
   ?>
-  <div class="bxslider">
+  <div class="bxslider main-slider">
     <?php
       foreach($sliderCollection->getData() as $slide){
           ?>
@@ -30,7 +30,7 @@ if ($sliderStatus == '1'){
         'bxSlider'
     ], function($){
         $(document).ready(function() {
-            $('.bxslider').bxSlider( {
+            $('.main-slider').bxSlider( {
                 controls: true,
                 captions: true,
                 slideWidth: 700

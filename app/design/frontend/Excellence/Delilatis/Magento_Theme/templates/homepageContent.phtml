@@ -1,49 +1,42 @@
-<!-- above link set pending -->
 <div>
-    <div class="column-2 women-catalog-slider" style="margin-top: -1%; font-family: 'Oswald', sans-serif;">
-         <?php
-            echo $this->getLayout()
-              ->createBlock('Magento\Cms\Block\Block')
-              ->setBlockId('women-s')
-              ->toHtml();
-          ?>
-    </div>
+    fgrhfrd
 </div>
-<div style="width:100%; float:left; font-family: 'Oswald', sans-serif;" > 
-    <div>
-        <?php
-            echo $this->getLayout()
-              ->createBlock('Magento\Cms\Block\Block')
-              ->setBlockId('men')
-              ->toHtml();
-          ?>
-         </div>
-    </div>
-
+<div>
+<?php
+        echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('cake')
+        ->toHtml();
+    ?>
+</div>
 <script type="text/javascript" xml="space">
     require([
         'jquery',
         'bxSlider'
-    ], function ($) {
-        // 'use strict';
-        // $.noConflict();
-
-        //less-essential-slider
+    ], function($){
         $(document).ready(function() {
-            $('.bxslider').bxSlider( {
-                // controls: true,
+            $('.bxslider.cake-slider').bxSlider( {
+                controls: true,
                 captions: true,
-                slideWidth: 700
+                slideWidth: 300,  
+                minSlides:3,
+                maxSlides:3,
+                moveSlides:3
             });
         });
-
-        //men-catalog-carousel
+    });
+</script> 
+<!-- <script type="text/javascript" xml="space">
+    require([
+        'jquery',
+        'bxSlider'
+    ], function($){
         $(document).ready(function() {
-            $('.bxslider').bxSlider( {
+            $('.main-slider').bxSlider( {
                 controls: true,
                 captions: true,
                 slideWidth: 700
             });
         });
     });
-</script>
+</script> -->
