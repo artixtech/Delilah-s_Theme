@@ -53,8 +53,15 @@
 
 <script type="text/javascript">
    require(['jquery'], function($) {
-        $('.category-head').click(function(){
+        $('.category-head').hover(function(){
         $('#links').toggleClass('show-block');
     });
 });
-   </script>
+</script>
+<script type="text/javascript">
+   require(['jquery'], function($) {
+        $('.action.nav-toggle').click(function(){
+        $('.sidebar').toggleClass('show-block');
+    });
+});
+</script>
